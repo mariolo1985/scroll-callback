@@ -31,6 +31,7 @@ This will add a scroll event listener to your **window** object
 ## Parameters
 
 | Name   | Type   | Required   | Default Value   | Description   |
+| --- | --- | --- | --- | --- |
 | callback | function | true | null | function to be called when window is scrolling |
 | waitDuration | number | false | 50 | Wait duration in between callback |
 
