@@ -30,6 +30,9 @@ function scrollAction(position) {
 This will add a scroll event listener to your **window** object
 
 ## Parameters
+```javascript
+    scrollCallback(callback, waitDuration, elementId);
+```
 
 | Parameter Name   | Type   | Required   | Default Value   | Description   |
 | --- | --- | --- | --- | --- |
