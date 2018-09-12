@@ -1,8 +1,8 @@
 # scroll-callback
 
-A work-in-progress vanilla JS module. 
+This module will trigger a callback as your window is scrolling and return an element position.
 
-This module will trigger a callback as your window is scrolling.
+A work-in-progress vanilla JS module.
 
 Built by: [Mario Lo](https://github.com/mariolo1985)
 
@@ -18,11 +18,12 @@ yarn add scroll-callback
 import scrollCallback from 'scroll-callback';
 
 (() => {
-    scrollCallback(scrollAction, 2000);
+    scrollCallback(scrollAction, 1000, 'menu-container');
 })();
 
-function scrollAction() {
+function scrollAction(position) {
     console.log('scrolled');
+    console.log('menu positions: ', position);
 }
 ```
 
