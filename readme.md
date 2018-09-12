@@ -59,14 +59,14 @@ This is a wait time in milli-seconds. This sets the wait time in a setTimeout ca
 This is an element id in the DOM. If supplied, the element position will be returned to the callback. This calls `getBoundingClientRect()` on the element.
 
 
-### Future Features
+## Future Features
 
 WIP
 
-### Feature Request
+## Feature Request
 
 Please message hello@websitesbymario.com for feature requests.
 
-### Bug Report
+## Bug Report
 
 Please message hello@websitesbymario.com to report bugs.
