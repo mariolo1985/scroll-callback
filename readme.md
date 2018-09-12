@@ -18,13 +18,8 @@ yarn add scroll-callback
 import scrollCallback from 'scroll-callback';
 
 (() => {
-    scrollCallback(testCallback, 2000);
+    scrollCallback(scrollAction, 2000);
 })();
-
-function testCallback() {
-    console.log('callback');
-}
-
 
 function scrollAction() {
     console.log('scrolled');
@@ -35,7 +30,7 @@ This will add a scroll event listener to your **window** object
 
 ## Parameters
 
-| Name | Type | Required | Default Value | Description |
+| Name   | Type   | Required   | Default Value   | Description   |
 | callback | function | true | null | function to be called when window is scrolling |
 | waitDuration | number | false | 50 | Wait duration in between callback |
 
