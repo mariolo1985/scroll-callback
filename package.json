@@ -1,0 +1,25 @@
+{
+  "name": "scroll-callback",
+  "version": "0.0.1",
+  "description": "triggers a callback function on window scroll",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariolo1985/scroll-callback.git"
+  },
+  "keywords": [
+    "scroll",
+    "window",
+    "dom",
+    "javascript"
+  ],
+  "author": "Mario Lo <hello@websitesbymario.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariolo1985/scroll-callback/issues"
+  },
+  "homepage": "https://github.com/mariolo1985/scroll-callback#readme"
+}
