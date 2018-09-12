@@ -1,6 +1,6 @@
 {
   "name": "scroll-callback",
-  "version": "0.0.3",
+  "version": "0.0.31",
   "description": "triggers a callback function on window scroll",
   "main": "index.js",
   "scripts": {
@@ -12,9 +12,12 @@
   },
   "keywords": [
     "scroll",
+    "scrolling",
+    "callback",
     "window",
     "dom",
-    "javascript"
+    "javascript",
+    "addeventlistener"
   ],
   "author": "Mario Lo <hello@websitesbymario.com>",
   "license": "ISC",

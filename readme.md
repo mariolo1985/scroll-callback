@@ -40,3 +40,5 @@ This will add a scroll event listener to your **window** object
 * Return an element position in callback
 
 ### Feature Request
+
+Please message hello@websitesbymario.com for feature requests
