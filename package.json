@@ -1,6 +1,6 @@
 {
   "name": "scroll-callback",
-  "version": "0.0.31",
+  "version": "0.0.35",
   "description": "triggers a callback function on window scroll",
   "main": "index.js",
   "scripts": {
