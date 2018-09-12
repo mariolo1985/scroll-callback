@@ -14,7 +14,7 @@ yarn add scroll-callback
 
 ## Example
 
-```
+```javascript
 import scrollCallback from 'scroll-callback';
 
 (() => {
