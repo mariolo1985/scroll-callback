@@ -2,7 +2,7 @@
 
 This module will trigger a callback as your window is scrolling and return an element position.
 
-A work-in-progress vanilla JS module.
+A work-in-progress JS module.
 
 Built by: [Mario Lo](https://github.com/mariolo1985)
 
@@ -15,37 +15,44 @@ yarn add scroll-callback
 ## Example
 
 ```javascript
-import scrollCallback from 'scroll-callback';
+import { scrollCallback, scrollCallbackWithElement, callbackAtElement } from 'scroll-callback';
 
 (() => {
-    scrollCallback(scrollAction, 1000, 'menu-container');
+    scrollCallback(scrollAction, 1000);
+    scrollCallbackWithElement(scrollAction, 1000, 'profile-container');
+    callbackAtElement(scrollAction, 1500, 'profile-container');
 })();
 
-function scrollAction(position) {
-    console.log('scrolled');
-    console.log('menu positions: ', position);
-}
 ```
 
 This will add a scroll event listener to your **window** object
 
+## Functions
+
+**scrollCallback**
+
+`This will trigger the callback while the page is scrolling.`
+
+**scrollCallbackWithElement**
+
+`This will trigger the callback and return an element position object while the page is scrolling.`
+
+**callbackAtElement**
+
+`This will trigger the callback at the element. The callback will only be triggered once.` 
+
 ## Parameters
 ```javascript
-const callback = (elementPosition) => {
-    console.log(elementPosition);
-};
-
-const waitDuration = 500; // in milli-seconds
-const elementId = 'menu-container';
-
-scrollCallback(callback, waitDuration, elementId);
+scrollCallback(callback, waitDuration);
+scrollCallbackWithElement(callback, waitDuration, elementId);
+callbackAtElement(callback, waitDuration, elementId);
 ```
 
 | Parameter Name   | Type   | Required   | Default Value   | Description   |
 | --- | --- | --- | --- | --- |
-| callback | function | true | null | function to be called when window is scrolling |
+| callback | function | true | null | A function to be called on scroll |
 | waitDuration | number | false | 50 | Wait duration in between callback |
-| elementId | string | false | null | including an elementId will return the element's position in the callback |
+| elementId | string | false | null | The id of the element we want the position of |
 
 **callback**
 
@@ -68,7 +75,8 @@ This is an element id in the DOM. If supplied, the element position will be retu
 
 ## Future Features
 
-WIP
+- [x] ~~Return an element position in callback~~ **implemented in version 0.0.37**
+- [ ] Remove scroll event listener **Currently only implemented in `callbackAtElement`**
 
 ## Feature Request
 
