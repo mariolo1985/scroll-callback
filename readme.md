@@ -31,6 +31,13 @@ This will add a scroll event listener to your **window** object
 
 ## Parameters
 ```javascript
+const callback = (elementPosition) => {
+    console.log(elementPosition);
+};
+
+const waitDuration = 500; // in milli-seconds
+const elementId = 'menu-container';
+
 scrollCallback(callback, waitDuration, elementId);
 ```
 
