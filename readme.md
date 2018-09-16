@@ -41,6 +41,8 @@ This will add a scroll event listener to your **window** object
 
 `This will trigger the callback at the element. The callback will only be triggered once.` 
 
+> Returns the element in callback
+
 ## Parameters
 ```javascript
 scrollCallback(callback, waitDuration);
