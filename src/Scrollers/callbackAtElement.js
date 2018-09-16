@@ -10,11 +10,11 @@ module.exports = function callbackAtElement(callback, waitDuration, elementId) {
     }
 
     function scrolled() {
-        var mkElement = document.getElementById(elementId);
-        if (mkElement !== null) {
-            if (mkElement.getBoundingClientRect().top <= 0) {
+        var el = document.getElementById(elementId);
+        if (el !== null) {
+            if (el.getBoundingClientRect().top <= 0) {
                 window.removeEventListener('scroll', mkAddCallbackAtElementListener);
-                callback(mkElement);
+                callback(el);
             }
         }
     }

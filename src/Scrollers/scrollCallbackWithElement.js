@@ -1,13 +1,13 @@
 module.exports = function scrollCallbackWithElement(callback, waitDuration, elementId) {
     var scrollCallbackWithElementTimeout;
     function mkAddScrollCallbackWithElementListener() {
-        var mkElement = document.getElementById(elementId);
+        var el = document.getElementById(elementId);
 
         if (!scrollCallbackWithElementTimeout) {
             scrollCallbackWithElementTimeout = setTimeout(function () {
                 scrollCallbackWithElementTimeout = null;
-                if (mkElement !== null) {
-                    callback(mkElement.getBoundingClientRect());
+                if (el !== null) {
+                    callback(el.getBoundingClientRect());
                     return;
                 }
 
