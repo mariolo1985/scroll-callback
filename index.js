@@ -1,6 +1,6 @@
-module.exports.scrollCallback = require('./src/Scrollers/scrollCallback');
-module.exports.scrollCallbackWithElement = require('./src/Scrollers/scrollCallbackWithElement');
-module.exports.callbackAtElement = require('./src/Scrollers/callbackAtElement');
+module.exports.scrollCallback = require('./src/scrollcaller/scrollCallback');
+module.exports.scrollCallbackWithElement = require('./src/scrollcaller/scrollCallbackWithElement');
+module.exports.callbackAtElement = require('./src/scrollcaller/callbackAtElement');
 
 // Utils
 module.exports.getClass = require('./src/utils/getClass');
