@@ -15,12 +15,13 @@ yarn add scroll-callback
 ## Example
 
 ```javascript
-import { scrollCallback, scrollCallbackWithElement, callbackAtElement } from 'scroll-callback';
+import { scrollCallback, scrollCallbackWithElement, callbackAtElement, callbackAtElementSurface } from 'scroll-callback';
 
 (() => {
     scrollCallback(scrollAction, 1000);
     scrollCallbackWithElement(scrollAction, 1000, 'profile-container');
     callbackAtElement(scrollAction, 1500, 'profile-container');
+    callbackAtElementSurface(scrollAction, 1500, 'profile-container');
 })();
 
 ```
@@ -39,7 +40,11 @@ This will add a scroll event listener to your **window** object
 
 **callbackAtElement**
 
-`This will trigger the callback at the element. The callback will only be triggered once.` 
+`This will trigger the callback when the element hits the top of the page. The callback will only be triggered once.` 
+
+**callbackAtElementSurface**
+
+`This will trigger the callback when the top element surfaces at the bottom page. The callback will only be triggered once.` 
 
 > Returns the element in callback
 
@@ -48,6 +53,7 @@ This will add a scroll event listener to your **window** object
 scrollCallback(callback, waitDuration);
 scrollCallbackWithElement(callback, waitDuration, elementId);
 callbackAtElement(callback, waitDuration, elementId);
+callbackAtElementSurface(callback, waitDuration, elementId);
 ```
 
 | Parameter Name   | Type   | Required   | Default Value   | Description   |
@@ -78,7 +84,7 @@ This is an element id in the DOM. If supplied, the element position will be retu
 ## Future Features
 
 - [x] ~~Return an element position in callback~~ **implemented in version 0.0.37**
-- [ ] Remove scroll event listener **Currently only implemented in `callbackAtElement`**
+- [ ] Remove scroll event listener **Currently only implemented in `callbackAtElement()` and `callbackAtElementSurface()`**
 
 ## Feature Request
 
