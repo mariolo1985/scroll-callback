@@ -25,7 +25,9 @@ import {
 (() => {
     scrollCallback(scrollAction, 1000);
     scrollCallbackWithElement(scrollAction, 1000, 'profile-container');
+    scrollCallbackWithElements(scrollAction, 1500, 'menu-item');
     callbackAtElement(scrollAction, 1500, 'profile-container');
+    callbackAtElements(scrollAction, 1500, 'menu-item');
     callbackAtElementSurface(scrollAction, 1500, 'profile-container');
 })();
 
@@ -45,10 +47,26 @@ import {
 
 > Returns the element in callback
 
+**scrollCallbackWithElements**
+
+- Handles multiple elements by passing in a class
+- Triggers the callback as the page is scrolling and returns the nodelist in the callback
+- Does not remove the scroll event listener
+
+> Returns a static nodelist in callback
+
 **callbackAtElement**
 
 - Triggers the callback when the top of the element reaches the top of the page
 - Does remove the scroll event listener
+
+> Returns the element in callback
+
+**callbackAtElements**
+
+- Handles multiple elements by passing in a class
+- Triggers the callback when the top of an element reaches the top of the page
+- Does remove the scroll event listener when all elements have been "called back"
 
 > Returns the element in callback
 
@@ -71,7 +89,9 @@ import {
 ```javascript
 scrollCallback(callback, waitDuration);
 scrollCallbackWithElement(callback, waitDuration, elementId);
+scrollCallbackWithElements(callback, waitDuration, elementClass);
 callbackAtElement(callback, waitDuration, elementId);
+callbackAtElements(callback, waitDuration, elementClass);
 callbackAtElementSurface(callback, waitDuration, elementId);
 getElementByClass(className);
 ```
@@ -79,8 +99,9 @@ getElementByClass(className);
 | Parameter Name   | Type   | Required   | Default Value   | Description   |
 | --- | --- | --- | --- | --- |
 | callback | function | true | null | A function to be called on scroll |
-| waitDuration | number | false | 50 | Wait duration in between callback |
+| waitDuration | number or null for default | false | 50 | Wait duration in between callback |
 | elementId | string | false | null | The id of the element we want the position of |
+| elementClass | string | false | true | The id of the element we want the position of |
 | className | string | false | true | Class name of elements we want |
 
 **callback**
