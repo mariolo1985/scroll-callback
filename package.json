@@ -1,7 +1,7 @@
 {
   "name": "scroll-callback",
-  "version": "0.1.2",
-  "description": "triggers a callback function on window scroll",
+  "version": "0.2.0",
+  "description": "A native scroll event module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

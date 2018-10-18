@@ -4,4 +4,4 @@ module.exports.callbackAtElement = require('./src/scrollcaller/callbackAtElement
 module.exports.callbackAtElementSurface = require('./src/scrollcaller/callbackAtElementSurface');
 
 // Utils
-module.exports.getClass = require('./src/utils/getClass');
+module.exports.getElementByClass = require('./src/utils/getElementByClass');
