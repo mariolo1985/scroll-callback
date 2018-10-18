@@ -7,7 +7,7 @@ module.exports = function scrollCallbackWithElement(callback, waitDuration, elem
             scrollCallbackWithElementTimeout = setTimeout(function () {
                 scrollCallbackWithElementTimeout = null;
                 if (el !== null) {
-                    callback(el.getBoundingClientRect());
+                    callback(el);
                     return;
                 }
 

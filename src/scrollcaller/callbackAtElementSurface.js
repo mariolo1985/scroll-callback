@@ -1,6 +1,6 @@
 module.exports = function callbackAtElementSurface(callback, waitDuration, elementId) {
     var callbackAtElementTimeout;
-    function mkAddCallbackAtElementListener() {
+    function mkAddCallbackAtElementSurfaceListener() {
         if (!callbackAtElementTimeout) {
             callbackAtElementTimeout = setTimeout(function () {
                 callbackAtElementTimeout = null;
@@ -13,7 +13,7 @@ module.exports = function callbackAtElementSurface(callback, waitDuration, eleme
         var el = document.getElementById(elementId);
         if (el !== null) {
             if (window.innerHeight + window.scrollY > el.getBoundingClientRect().top) {
-                window.removeEventListener('scroll', mkAddCallbackAtElementListener);
+                window.removeEventListener('scroll', mkAddCallbackAtElementSurfaceListener);
                 callback(el);
             }
         }
@@ -32,5 +32,5 @@ module.exports = function callbackAtElementSurface(callback, waitDuration, eleme
     }
 
     // passed checks
-    window.addEventListener('scroll', mkAddCallbackAtElementListener);
+    window.addEventListener('scroll', mkAddCallbackAtElementSurfaceListener);
 }
