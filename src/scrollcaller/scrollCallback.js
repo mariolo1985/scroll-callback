@@ -5,7 +5,7 @@ module.exports = function scrollCallback(callback, waitDuration) {
             scrollTimeout = setTimeout(function () {
                 scrollTimeout = null;
                 callback();
-            }, waitDuration === undefined ? 50 : waitDuration)
+            }, waitDuration === undefined || waitDuration === null ? 50 : waitDuration)
         }
     }
 

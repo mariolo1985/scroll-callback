@@ -12,7 +12,7 @@ module.exports = function scrollCallbackWithElement(callback, waitDuration, elem
                 }
 
                 callback();
-            }, waitDuration === undefined ? 50 : waitDuration)
+            }, waitDuration === undefined || waitDuration === null ? 50 : waitDuration)
         }
     }
 
