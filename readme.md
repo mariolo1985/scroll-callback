@@ -1,6 +1,6 @@
 # scroll-callback
 
-A scroll throttled event module
+A scroll event module
 
 ## Install
 
