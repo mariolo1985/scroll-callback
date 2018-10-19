@@ -111,25 +111,25 @@ getElementByClass(className);
 | elementClass | string | false | true | The id of the element we want the position of |
 | className | string | false | true | Class name of elements we want |
 
-**callback**
+### callback
 
 `type: function`
 
 This function will be called as the window is scrolling.
 
-**waitDuration**
+### waitDuration
 
 `type: number`
 
 This is a wait time in milli-seconds. This is provided to give you custom timing to fire your callback.
 
-**elementId**
+### elementId
 
 `type: string`
 
 An element ID in the DOM. If supplied, the element be returned to the callback.
 
-**className**
+### className
 
 `type: string`
 
