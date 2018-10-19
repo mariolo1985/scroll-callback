@@ -1,10 +1,6 @@
 # scroll-callback
 
-This module will add a scroll event listener to the **window** object to trigger a callback.
-
-A work-in-progress JS module.
-
-Built by: [Mario Lo](https://github.com/mariolo1985)
+A scroll throttled event module
 
 ## Install
 
@@ -12,13 +8,33 @@ Built by: [Mario Lo](https://github.com/mariolo1985)
 yarn add scroll-callback
 ```
 
+## Description
+
+This module can be used to fire a callback on a page scroll. Many scenarios are handled.
+
+You can:
+- Fire a callback when an element reaches the top of the screen
+- Fire a callback when an element reaches the bottom of the screen
+- Fire a callback and return the element everytime the page scrolls
+- Fire a callback when multiple elements reaches the top of the screen
+- ...more!
+
+This is element focused and can be used in many ways.
+
+A work-in-progress JS module.
+
+Built by: [Mario Lo](https://github.com/mariolo1985)
+
+
 ## Example
 
 ```javascript
 import { 
     scrollCallback, 
     scrollCallbackWithElement, 
+    scrollCallbackWithElements,
     callbackAtElement, 
+    callbackAtElements,
     callbackAtElementSurface 
 } from 'scroll-callback';
 
@@ -37,50 +53,41 @@ import {
 
 **scrollCallback**
 
-- Triggers a callback as the page is scrolling
-- Does not remove the scroll event listener
+Fires a callback as the page is scrolling. Does not remove the scroll event listener.
 
 **scrollCallbackWithElement**
 
-- Triggers the callback as the page is scrolling and returns the element in the callback
-- Does not remove the scroll event listener
+Fires the callback as the page is scrolling and returns the element in the callback. Does not remove the scroll event listener.
 
 > Returns the element in callback
 
 **scrollCallbackWithElements**
 
-- Handles multiple elements by passing in a class
-- Triggers the callback as the page is scrolling and returns the nodelist in the callback
-- Does not remove the scroll event listener
+Handles multiple elements by passing in a class. Fires the callback as the page is scrolling and returns the nodelist in the callback. Does not remove the scroll event listener
 
 > Returns a static nodelist in callback
 
 **callbackAtElement**
 
-- Triggers the callback when the top of the element reaches the top of the page
-- Does remove the scroll event listener
+Fires the callback when the element reaches the top of the page. Does remove the scroll event listener
 
 > Returns the element in callback
 
 **callbackAtElements**
 
-- Handles multiple elements by passing in a class
-- Triggers the callback when the top of an element reaches the top of the page
-- Does remove the scroll event listener when all elements have been "called back"
+Handles multiple elements by passing in a class. Fires the callback when the top of an element reaches the top of the page. Does remove the scroll event listener when all elements have been "called back"
 
-> Returns the element in callback
+> Returns the nodelists in callback
 
 **callbackAtElementSurface**
 
-- Triggers the callback when the top of the element surfaces at the bottom page. 
-- Does remove the scroll event listener
+Fires the callback when the top of the element reaches the bottom of the page. Does remove the scroll event listener
 
 > Returns the element in callback
 
 **getElementByClass**
 
-- Gets a node list of elements via class name
-- calls `querySelectorAll()`
+Gets a node list of elements via class name. Calls `querySelectorAll()`
 
 > Returns a static nodeList
 
@@ -114,7 +121,7 @@ This function will be called as the window is scrolling.
 
 `type: number`
 
-This is a wait time in milli-seconds. This sets the wait time in a setTimeout call to delay the scroll listener.
+This is a wait time in milli-seconds. This is provided to give you custom timing to fire your callback.
 
 **elementId**
 
