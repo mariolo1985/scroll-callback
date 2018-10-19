@@ -51,41 +51,41 @@ import {
 
 ## Functions
 
-**scrollCallback**
+### scrollCallback
 
 Fires a callback as the page is scrolling. Does not remove the scroll event listener.
 
-**scrollCallbackWithElement**
+### scrollCallbackWithElement
 
 Fires the callback as the page is scrolling and returns the element in the callback. Does not remove the scroll event listener.
 
 > Returns the element in callback
 
-**scrollCallbackWithElements**
+### scrollCallbackWithElements
 
 Handles multiple elements by passing in a class. Fires the callback as the page is scrolling and returns the nodelist in the callback. Does not remove the scroll event listener
 
 > Returns a static nodelist in callback
 
-**callbackAtElement**
+### callbackAtElement
 
 Fires the callback when the element reaches the top of the page. Does remove the scroll event listener
 
 > Returns the element in callback
 
-**callbackAtElements**
+### callbackAtElements
 
 Handles multiple elements by passing in a class. Fires the callback when the top of an element reaches the top of the page. Does remove the scroll event listener when all elements have been "called back"
 
 > Returns the nodelists in callback
 
-**callbackAtElementSurface**
+### callbackAtElementSurface
 
 Fires the callback when the top of the element reaches the bottom of the page. Does remove the scroll event listener
 
 > Returns the element in callback
 
-**getElementByClass**
+### getElementByClass
 
 Gets a node list of elements via class name. Calls `querySelectorAll()`
 
