@@ -51,13 +51,13 @@ import {
 
 ## Functions
 
-### 1. scrollCallback
+### 1. scrollCallback(callback, waitDuration)
 
 Fires a callback as the page is scrolling. 
 
 Does not remove the event listener.
 
-### 2. scrollCallbackWithElement
+### 2. scrollCallbackWithElement(callback, waitDuration, elementId)
 
 Fires the callback as the page is scrolling and returns the element in the callback. 
 
@@ -65,7 +65,7 @@ Does not remove the event listener.
 
 > Returns the element in callback
 
-### 3. scrollCallbackWithElements
+### 3. scrollCallbackWithElements(callback, waitDuration, elementClass)
 
 Pass in a class. 
 
@@ -75,7 +75,7 @@ Does not remove the scroll event listener.
 
 > Returns a elements in callback
 
-### 4. callbackAtElement
+### 4. callbackAtElement(callback, waitDuration, elementId)
 
 Fires the callback when the element reaches the top of the page. 
 
@@ -83,7 +83,7 @@ Removes the event listener.
 
 > Returns the element in callback
 
-### 5. callbackAtElements
+### 5. callbackAtElements(callback, waitDuration, elementClass)
 
 Pass in class. 
 
@@ -93,7 +93,7 @@ Remove the event listener when all elements have been "called back"
 
 > Returns the elements in callback
 
-### callbackAtElementSurface
+### 6. callbackAtElementSurface(callback, waitDuration, elementId)
 
 Fires the callback when the element reaches the bottom of the page. 
 
@@ -101,7 +101,7 @@ Remove the scroll event listener
 
 > Returns the element in callback
 
-### getElementByClass
+### 7. getElementByClass(className)
 
 Gets the elements via class name. Calls `querySelectorAll()`.
 
@@ -109,16 +109,6 @@ Gets the elements via class name. Calls `querySelectorAll()`.
 
 
 ## Parameters
-```javascript
-scrollCallback(callback, waitDuration);
-scrollCallbackWithElement(callback, waitDuration, elementId);
-scrollCallbackWithElements(callback, waitDuration, elementClass);
-callbackAtElement(callback, waitDuration, elementId);
-callbackAtElements(callback, waitDuration, elementClass);
-callbackAtElementSurface(callback, waitDuration, elementId);
-getElementByClass(className);
-```
-
 | Parameter Name   | Type   | Required   | Default Value   | Description   |
 | --- | --- | --- | --- | --- |
 | callback | function | true | null | A function to be called on scroll |
