@@ -1,23 +1,25 @@
 {
   "name": "scroll-callback",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "A scroll event module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint src"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mariolo1985/scroll-callback.git"
   },
   "keywords": [
+    "addeventlistener",
+    "callback",
+    "dom",
+    "frontend",
+    "front-end",
+    "javascript",
     "scroll",
     "scrolling",
-    "callback",
-    "window",
-    "dom",
-    "javascript",
-    "addeventlistener"
+    "window"
   ],
   "author": "Mario Lo <hello@websitesbymario.com>",
   "license": "ISC",
