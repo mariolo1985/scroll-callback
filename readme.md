@@ -1,6 +1,6 @@
 # scroll-callback
 
-A scroll event module
+A scroll event listener module
 
 ## Install
 
@@ -39,55 +39,71 @@ import {
 } from 'scroll-callback';
 
 (() => {
-    scrollCallback(scrollAction, 1000);
-    scrollCallbackWithElement(scrollAction, 1000, 'profile-container');
-    scrollCallbackWithElements(scrollAction, 1500, 'menu-item');
-    callbackAtElement(scrollAction, 1500, 'profile-container');
-    callbackAtElements(scrollAction, 1500, 'menu-item');
-    callbackAtElementSurface(scrollAction, 1500, 'profile-container');
+    scrollCallback(callback(), 1000);
+    scrollCallbackWithElement(callback(), 1000, 'html-id');
+    scrollCallbackWithElements(callback(), 1500, 'html-class');
+    callbackAtElement(callback(), 1500, 'html-id');
+    callbackAtElements(callback(), 1500, 'html-class');
+    callbackAtElementSurface(callback(), 1500, 'html-id');
 })();
 
 ```
 
 ## Functions
 
-### scrollCallback
+### 1. scrollCallback
 
-Fires a callback as the page is scrolling. Does not remove the scroll event listener.
+Fires a callback as the page is scrolling. 
 
-### scrollCallbackWithElement
+Does not remove the event listener.
 
-Fires the callback as the page is scrolling and returns the element in the callback. Does not remove the scroll event listener.
+### 2. scrollCallbackWithElement
 
-> Returns the element in callback
+Fires the callback as the page is scrolling and returns the element in the callback. 
 
-### scrollCallbackWithElements
-
-Handles multiple elements by passing in a class. Fires the callback as the page is scrolling and returns the nodelist in the callback. Does not remove the scroll event listener
-
-> Returns a static nodelist in callback
-
-### callbackAtElement
-
-Fires the callback when the element reaches the top of the page. Does remove the scroll event listener
+Does not remove the event listener.
 
 > Returns the element in callback
 
-### callbackAtElements
+### 3. scrollCallbackWithElements
 
-Handles multiple elements by passing in a class. Fires the callback when the top of an element reaches the top of the page. Does remove the scroll event listener when all elements have been "called back"
+Pass in a class. 
 
-> Returns the nodelists in callback
+Fires the callback as the page is scrolling and returns the elements in the callback. 
+
+Does not remove the scroll event listener.
+
+> Returns a elements in callback
+
+### 4. callbackAtElement
+
+Fires the callback when the element reaches the top of the page. 
+
+Removes the event listener.
+
+> Returns the element in callback
+
+### 5. callbackAtElements
+
+Pass in class. 
+
+Fires the callback when the element reaches the top of the page. 
+
+Remove the event listener when all elements have been "called back"
+
+> Returns the elements in callback
 
 ### callbackAtElementSurface
 
-Fires the callback when the top of the element reaches the bottom of the page. Does remove the scroll event listener
+Fires the callback when the element reaches the bottom of the page. 
+
+Remove the scroll event listener
 
 > Returns the element in callback
 
 ### getElementByClass
 
-Gets a node list of elements via class name. Calls `querySelectorAll()`
+Gets the elements via class name. Calls `querySelectorAll()`.
 
 > Returns a static nodeList
 
